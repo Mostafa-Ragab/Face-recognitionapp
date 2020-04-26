@@ -7,6 +7,8 @@ import Logo from './component/Logo';
 import Rank from './component/Rank';
 import Imagelinkform from './component/Imagelinkform';
 import FaceRecogintion from './component/FaceRecogintion';
+import Signin from './component/signin/Signin';
+import Register from './component/Register/Register';
 
 const particlesOptions = {
   particles: {
@@ -30,6 +32,8 @@ class App extends Component {
       input: '',
       imageUrl: '',
       box: {},
+      route: 'signin',
+      isSignedIn: false
     }
   }
   calcuatefaceLocation = (data) => {
@@ -59,18 +63,37 @@ displayFaceBox = (box) => {
       .then(response => this.displayFaceBox(this.calcuatefaceLocation(response)))
       .catch(err => console.log(err));
   }
+  onRouteChange = (route) => {
+    if (route === 'signout') {
+      this.setState({isSignedIn: false})
+    } else if (route === 'home') {
+      this.setState({isSignedIn: true})
+    }
+    this.setState({route: route});
+  }
+
   render() {
+    const { isSignedIn,imageUrl, route, box} = this.state ;
     return (
       <div className="App">
         <Particles className='particles'
           params={particlesOptions}/>
-        <Navigation />
-        <Logo />
-        <Rank />
-        <Imagelinkform
-          onInputChange={this.onInputChange} 
-          onbuttonsubmit={this.onbuttonsubmit}/>
-        <FaceRecogintion box={this.state.box} imageUrl={this.state.imageUrl}/>
+        <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/>
+        { route ==='home'
+          ? <div>
+              <Logo />
+              <Rank />
+              <Imagelinkform
+                onInputChange={this.onInputChange} 
+                onbuttonsubmit={this.onbuttonsubmit}/>
+              <FaceRecogintion box={box} imageUrl={imageUrl}/>
+            </div>
+          : (
+              this.state.route === 'signin'
+              ? <Signin onRouteChange={this.onRouteChange}/>
+              : <Register onRouteChange={this.onRouteChange}/> 
+          )
+        }
       </div>
     );
   }
