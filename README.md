@@ -1,2 +1,2 @@
 # Face-recognitionapp
-for the first project in React
+JavaScript app for face detection and face recognition in the browser and nodejs
