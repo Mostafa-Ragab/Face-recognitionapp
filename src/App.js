@@ -41,7 +41,15 @@ class App extends Component {
         name: '',
         email: '',
         entries: 0,
-        joined: ''
+        joined: '',
+        user: {
+          id: '',
+            name:'',
+            email:'',
+            password: '',
+            entries: 0,
+            joined: ''
+        }
       }
     }
   }
@@ -132,7 +140,7 @@ class App extends Component {
                 onButtonSubmit={this.onButtonSubmit}
               />
               <FaceRecognition box={box} imageUrl={imageUrl} />
-            </div>
+            </div> 
           : (
              route === 'signin'
              ? <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
