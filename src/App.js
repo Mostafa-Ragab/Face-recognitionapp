@@ -8,6 +8,7 @@ import Register from './components/Register/Register';
 import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
+import './App.css';
 
 
 //You must add your own API key here from Clarifai.
