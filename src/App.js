@@ -38,18 +38,11 @@ class App extends Component {
       isSignedIn: false,
       user: {
         id: '',
-        name: '',
-        email: '',
+        name:'',
+        email:'',
+        password: '',
         entries: 0,
-        joined: '',
-        user: {
-          id: '',
-            name:'',
-            email:'',
-            password: '',
-            entries: 0,
-            joined: ''
-        }
+        joined: ''
       }
     }
   }
