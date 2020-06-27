@@ -25,7 +25,7 @@ class signin extends Component {
           })
         })
           .then(response => response.json())
-          .then(user => {
+          .then(us => {
             if (user.id) {
                 this.props.loadUser(user)
                 this.props.onRouteChange('home');
