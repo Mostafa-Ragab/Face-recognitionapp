@@ -53,7 +53,7 @@ class Register extends Component {
                                 type="text" 
                                 name="name"  
                                 id="name" 
-                                onChange ={ this.onNameChange }
+                                onChange ={this.onNameChange}
                                 />
                         </div>
                         <div className="mt3">
@@ -63,7 +63,7 @@ class Register extends Component {
                                 type="email" 
                                 name="email-address"  
                                 id="email-address" 
-                                onChange ={ this.onEmailChange }
+                                onChange ={this.onEmailChange}
                                 />
                         </div>
                         <div className="mv3">
@@ -83,7 +83,7 @@ class Register extends Component {
                             onClick={this.props.onRouteChange('home')}
                             className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" 
                             type="submit" 
-                            value="register"
+                            value="Register"
                         />
                         </div>
                     </div>
