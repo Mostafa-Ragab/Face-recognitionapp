@@ -8,7 +8,6 @@ class signin extends Component {
             signInPassword: ''
         }
     }
-    
     onEmailChange = (event) => {
         this.setState({signInEmail:event.target.value})
     }
@@ -66,10 +65,10 @@ class signin extends Component {
                     <div className="">
             
                     <input 
-                        onClick={ this.props.onRouteChange('home') }
+                        onClick={this.props.onRouteChange('home')}
                         className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" 
                         type="submit" 
-                        value="Sign In"
+                        value="Sign in"
                     />
                     </div>
                     <div className="lh-copy mt3">
