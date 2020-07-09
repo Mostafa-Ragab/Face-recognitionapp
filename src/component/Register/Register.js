@@ -21,7 +21,7 @@ class Register extends Component {
     }
 
     onSubmitSignIn = () => {
-        fetch('https://git.heroku.com/whispering-meadow-11646.git', {
+        fetch('https://git.heroku.com/whispering-meadow-11646.git/register', {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
@@ -29,7 +29,7 @@ class Register extends Component {
             password: this.state.password,
             name: this.state.name
           })
-          
+
         })
           .then(response => response.json())
           .then(user => {
