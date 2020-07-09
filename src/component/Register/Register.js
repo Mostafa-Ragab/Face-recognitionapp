@@ -29,6 +29,7 @@ class Register extends Component {
             password: this.state.password,
             name: this.state.name
           })
+          
         })
           .then(response => response.json())
           .then(user => {
