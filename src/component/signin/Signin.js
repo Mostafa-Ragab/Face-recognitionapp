@@ -16,7 +16,7 @@ class signin extends Component {
         this.setState({signInPassword:event.target.value})
     }
     onSubmitSignIn = () => {
-        fetch('https://git.heroku.com/whispering-meadow-11646.git', {
+        fetch('https://whispering-meadow-11646.herokuapp.com/signin',{
           method: 'post',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
