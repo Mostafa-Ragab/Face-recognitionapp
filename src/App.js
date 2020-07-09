@@ -12,6 +12,7 @@ import './App.css';
 
 const particlesOptions = {
   particles: {
+    
     number: {
       value: 30,
       density: {
