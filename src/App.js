@@ -9,10 +9,8 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import './App.css';
 
-
 const particlesOptions = {
   particles: {
-    
     number: {
       value: 30,
       density: {
